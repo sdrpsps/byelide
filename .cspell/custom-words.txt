@@ -1,0 +1,10 @@
+behaviour
+commitlint
+conventionalcommits
+nightwatch
+optimizelegibility
+pinia
+rushstack
+tiptap
+vuedraggable
+vuejs
