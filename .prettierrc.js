@@ -40,4 +40,6 @@ module.exports = {
   embeddedLanguageFormatting: 'auto',
   // html, vue, jsx 中每个属性占一行
   singleAttributePerLine: false,
+  // 插件
+  plugins: ['prettier-plugin-tailwindcss'],
 };
