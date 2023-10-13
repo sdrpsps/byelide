@@ -1,5 +1,9 @@
-<template>
-  <div>Layout</div>
-</template>
+<script setup lang="ts">
+import AppLeftPanel from '@/components/AppLeftPanel/AppLeftPanel.vue';
+</script>
 
-<script lang="ts" setup></script>
+<template>
+  <section class="flex h-full">
+    <AppLeftPanel />
+  </section>
+</template>
