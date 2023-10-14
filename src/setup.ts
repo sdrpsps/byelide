@@ -6,6 +6,9 @@ import ChartBlock from '@/block/basic/ChartBlock.vue';
 import ImageBlock from '@/block/basic/ImageBlock.vue';
 import type { App } from 'vue';
 import type { BlockType } from './block/types';
+import ButtonBlock from '@/block/external/ButtonBlock.vue';
+import FormBlock from '@/block/external/FormBlock.vue';
+import NotesBlock from '@/block/external/NotesBlock.vue';
 
 // 基础物料
 const baseBlocks = [
@@ -57,6 +60,21 @@ class BlockSuit {
 }
 
 const blockSuit = new BlockSuit();
+
+// 插件化注册物料
+blockSuit.addBlocks({
+  type: 'button',
+  material: ButtonBlock,
+});
+blockSuit.addBlocks({
+  type: 'form',
+  material: FormBlock,
+});
+blockSuit.addBlocks({
+  type: 'notes',
+  material: NotesBlock,
+});
+
 const blockMap = blockSuit.getBlockMap();
 export const blockMapSymbol = Symbol('blockMap');
 
@@ -72,3 +90,13 @@ export const setup = (app: App<Element>) => {
 
   app.use(ins);
 };
+
+// @ts-ignore: works on Vue 3, fails in Vue 2
+declare module '@vue/runtime-core' {
+  export interface ComponentCustomProperties {
+    /**
+     * Access to the application's blocksMap
+     */
+    $blocksMap: string;
+  }
+}

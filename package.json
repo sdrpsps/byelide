@@ -34,10 +34,14 @@
   },
   "dependencies": {
     "@icon-park/vue-next": "^1.4.2",
+    "@tiptap/core": "^2.1.12",
+    "@tiptap/pm": "^2.1.12",
+    "@tiptap/starter-kit": "^2.1.12",
+    "@tiptap/vue-3": "^2.1.12",
     "pinia": "^2.1.6",
+    "smooth-dnd": "0.12.1",
     "vue": "^3.3.4",
-    "vue-router": "^4.2.4",
-    "smooth-dnd": "0.12.1"
+    "vue-router": "^4.2.4"
   },
   "devDependencies": {
     "@commitlint/cli": "17.6.7",
