@@ -5,7 +5,7 @@ import { provide, ref } from 'vue';
 import MobilePreviewer from '@/components/AppPreviewer/MobilePreviewer.vue';
 import PreviewerSwitcher from '@/components/AppPreviewer/PreviewerSwitcher.vue';
 
-const previewType = ref<PreviewType>('mobile');
+const previewType = ref<PreviewType>('laptop');
 
 provide('previewType', previewType);
 </script>
