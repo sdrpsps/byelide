@@ -41,7 +41,7 @@ const { icon, color, bgColor } = STATUS_MAP[props.status];
 </script>
 
 <template>
-  <div class="flex items-center rounded-lg px-2 py-4" :style="{ backgroundColor: bgColor, color }">
+  <div class="flex flex-1 items-center rounded-lg px-2 py-4" :style="{ backgroundColor: bgColor, color }">
     <component :is="icon" />
     <span class="ml-1.5">{{ content }}</span>
   </div>

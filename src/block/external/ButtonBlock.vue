@@ -12,5 +12,5 @@ defineProps<{
 </script>
 
 <template>
-  <div class="flex h-9 items-center justify-center rounded-lg bg-gray-800 py-3 font-bold text-white">{{ title }}</div>
+  <div class="flex h-9 items-center justify-center rounded-lg bg-gray-800 py-3 font-bold text-white">Button</div>
 </template>
