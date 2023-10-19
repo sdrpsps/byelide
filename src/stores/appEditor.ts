@@ -2,7 +2,7 @@ import { defineStore } from 'pinia';
 import { ref } from 'vue';
 import { blocks as blocksData } from '@/mocks/blocks';
 
-const useAppEditor = defineStore('appEditor', () => {
+const useAppEditorStore = defineStore('appEditor', () => {
   const currentBlockId = ref<string | null>(null);
   const blocks = ref(blocksData);
 
@@ -27,4 +27,4 @@ const useAppEditor = defineStore('appEditor', () => {
   return { currentBlockId, blocks, selectBlock, updateBlock, updateBlocks };
 });
 
-export default useAppEditor;
+export default useAppEditorStore;
