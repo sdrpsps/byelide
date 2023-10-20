@@ -49,10 +49,10 @@ const onDrop = <T extends any[]>(arr: T, dragResult: DropResult) => {
     @drop="updateBlocks(onDrop(toRaw(blocks), $event))"
   >
     <smooth-dnd-draggable v-for="(block, index) in blocks" :key="block.id" class="!overflow-visible">
-      <div class="relative mt-4 flex w-full rounded-lg bg-white px-2.5 py-1" @click.stop="selectBlock(block.id)">
+      <div class="relative mt-4 flex w-full rounded-lg bg-white px-1 py-2.5" @click.stop="selectBlock(block.id)">
         <!-- 动态模块 -->
         <!-- @vue-ignore -->
-        <component :is="$blockMap[block.type].material" :content="block.props.content" />
+        <component class="z-10" :is="$blockMap[block.type].material" :content="block.props.content" />
         <!-- 边框 -->
         <div
           :class="{

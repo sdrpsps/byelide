@@ -1,5 +1,9 @@
-<script setup lang="ts"></script>
+<script lang="ts" setup>
+import ChartRender from '@/components/ChartRender/ChartRender.vue';
+</script>
 
 <template>
-  <div>chart block</div>
+  <div class="h-[450px] w-full">
+    <ChartRender />
+  </div>
 </template>

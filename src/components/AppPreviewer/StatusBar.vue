@@ -11,13 +11,14 @@ const time = useTimer();
         font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif"
         font-size="17px"
         font-weight="700"
+        fill="black"
         x="36"
         y="36"
       >
         {{ time }}
       </text>
       <rect x="134" y="11" width="124" height="36" rx="18" fill="black"></rect>
-      <g>
+      <g fill="black">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
